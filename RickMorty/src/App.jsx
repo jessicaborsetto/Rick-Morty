@@ -5,7 +5,10 @@ function App() {
 
   return (
     <>
-      <PicGallery></PicGallery>
+    <div className='container mx-auto'>
+    <PicGallery></PicGallery>
+
+    </div>
     </>
   )
 }

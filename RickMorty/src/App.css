@@ -1,5 +1,9 @@
-#root {
+.pageBtn{
+  width: 10%;
 
-  padding: 2rem;
-
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px;
+  gap: 5px;
+  border-radius: 50px;
 }

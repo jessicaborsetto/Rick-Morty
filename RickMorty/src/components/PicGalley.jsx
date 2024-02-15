@@ -6,13 +6,15 @@ import {
     Typography,
    
 } from "@material-tailwind/react";
+import Pages from "../atoms/Pages";
 
 function PicGallery() {
+    const [pageNumber, setPageNumber] = useState(1)
 
     const [characters, setCharacters] = useState([])
     const url = 'https://rickandmortyapi.com/api/'
-    const endpoint = 'character'
-    const apiUrl = url + endpoint
+    const endpoint = 'character/'
+    const apiUrl = url + endpoint + `?page=${pageNumber}`
 
     useEffect(() => {
         try {
@@ -29,10 +31,10 @@ function PicGallery() {
         catch (error) {
             console.error('error fetching data')
         }
-    }, [])
+    }, [apiUrl])
 
     const allCharacters = characters.map((character, index) => (
-        <Card key={index} className="w-full max-w-[40rem] h-[15rem] flex gap-3 m-5 bg-zinc-600 rounded-lg overflow-hidden">
+        <Card key={index} className="w-full h-[15rem] flex gap-3  bg-zinc-600 rounded-lg overflow-hidden">
         <CardHeader
           shadow={false}
           floated={false}
@@ -45,7 +47,7 @@ function PicGallery() {
           />
         </CardHeader>
         <CardBody className="grid content-evenly">
-          <Typography color="gray" className="uppercase text-xl font-bold">
+          <Typography color="gray" className="uppercase text-2xl font-bold">
             {character.name}
           </Typography>
         
@@ -74,10 +76,13 @@ function PicGallery() {
             {
                 characters && (
                     <>
-                        <div className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">{allCharacters}</div>
+                        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">{allCharacters}</div>
                     </>
                 )
-            }a
+            }
+            <div  className="container mx-auto my-10 flex justify-center gap-4">
+              <Pages setPageNumber={setPageNumber}></Pages>
+            </div>
         </>
     )
 }
