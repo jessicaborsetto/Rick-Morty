@@ -11,3 +11,16 @@
   gap: 5px;
   border-radius: 50px;
 }
+
+.badge{
+  width: 20%;
+  text-align: center;
+  font-weight: 600;
+}
+
+form input{
+  padding: 5px;
+  border-radius: 50px;
+  width: 50%;
+  background-color: #27272A;
+}

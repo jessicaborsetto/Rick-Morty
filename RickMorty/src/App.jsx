@@ -9,6 +9,7 @@ import './App.css'
 function App() {
   let [search, setSearch] = useState('');
   const [pageNumber, setPageNumber] = useState(1)
+  // const hasResults = characters.length > 0
 
   const url = 'https://rickandmortyapi.com/api/'
   const endpoint = 'character/'
@@ -41,7 +42,7 @@ function App() {
       </div>
  
  <div>
-  <Search setPageNumber={setPageNumber} setSearch={setSearch}></Search>
+  <Search setPageNumber={setPageNumber} setSearch={setSearch} ></Search>
  </div>
 
         <div className='container mx-auto'>
