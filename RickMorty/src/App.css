@@ -1,6 +1,10 @@
+#root, body{
+  background-color: #18181B;
+  height: 100%;
+}
+
 .pageBtn{
   width: 10%;
-
   display: flex;
   justify-content: center;
   padding: 5px 20px;
