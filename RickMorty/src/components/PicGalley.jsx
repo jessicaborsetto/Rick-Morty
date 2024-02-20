@@ -25,7 +25,7 @@ function PicGallery({ characters }) {
       </CardHeader>
 
       <CardBody className="grid content-evenly text-white w-full p-3">
-        <Typography className="uppercase text-2xl font-bold">
+        <Typography className="uppercase text-2xl font-bold hover:text-rose-600">
           {character.name}
 
         </Typography>
@@ -47,9 +47,9 @@ function PicGallery({ characters }) {
         <span className={getStatusColorClass(character.status)}>{character.status}</span>
         </Typography> */}
 
-        <p>Species: {character.species} {character.type} </p>
+        <p>Species: <b>{character.species} {character.type} </b></p>
 
-        <p>Last known location: {character.location.name} </p>
+        <p>Last known location: <b className="hover:text-rose-600">{character.location.name}</b> </p>
        
       </CardBody>
 

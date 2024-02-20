@@ -1,6 +1,7 @@
 import PicGallery from './components/PicGalley'
 import Header from './components/Header'
 import { useEffect, useState } from "react"
+import MyButtons from './atoms/MyButtons'
 
 import Search from './components/Search'
 import Pages from './atoms/Pages'
@@ -39,6 +40,10 @@ function App() {
     <>
       <div>
         <Header></Header>
+      </div>
+      
+      <div  className="container mx-auto py-10 flex justify-center gap-4">
+        <MyButtons></MyButtons>
       </div>
  
  <div>
