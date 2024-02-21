@@ -6,9 +6,9 @@ function Search({ setSearch, setPageNumber, characters }) {
     const [searchError, setSearchError] = useState(false);
 
     const handleSearch = (e) => {
-        const inputValue = e.target.value;
+        const inputValue = e.target.value.toLowerCase();
         const matchingCharacters = characters.filter((character) =>
-            character.name.includes(inputValue)
+            character.name.toLowerCase().includes(inputValue)
         );
 
         if (matchingCharacters.length > 0) {
