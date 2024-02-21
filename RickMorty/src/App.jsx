@@ -47,7 +47,7 @@ function App() {
       </div>
  
  <div>
-  <Search setPageNumber={setPageNumber} setSearch={setSearch} ></Search>
+  <Search setPageNumber={setPageNumber} setSearch={setSearch} characters={characters}></Search>
  </div>
 
         <div className='container mx-auto'>
