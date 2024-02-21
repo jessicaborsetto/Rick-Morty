@@ -50,7 +50,7 @@ function App() {
   <Search setPageNumber={setPageNumber} setSearch={setSearch} characters={characters}></Search>
  </div>
 
-        <div className='container mx-auto'>
+        <div className='container mx-auto p-5'>
           <PicGallery characters={characters}/>
         </div>
         <div  className="container mx-auto py-10 flex justify-center gap-4">

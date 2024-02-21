@@ -31,7 +31,7 @@ function PicGallery({ characters }) {
         </Typography>
         <hr />
 
-        <Typography className="badge ">
+        <Typography className="badge w-[5rem]">
           {character.status === 'Dead' && (
             <div className='bg-red-500 rounded-full'>{character.status}</div>
           )}

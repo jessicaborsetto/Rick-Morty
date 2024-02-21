@@ -4,7 +4,7 @@
 }
 
 .pageBtn{
-  width: 10%;
+  width: 20%;
   display: flex;
   justify-content: center;
   padding: 5px 20px;
@@ -13,7 +13,7 @@
 }
 
 .badge{
-  width: 20%;
+ 
   text-align: center;
   font-weight: 600;
 }
