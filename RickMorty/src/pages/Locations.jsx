@@ -1,6 +1,6 @@
 import PlaceGallery from '../components/PlaceGallery'
-import Search from '../components/Search'
 import Pages from '../atoms/Pages'
+import LocSearch from '../components/LocSearch';
 import { useEffect, useState } from "react"
 
 function Locations (){
@@ -38,7 +38,7 @@ useEffect(() => {
     return(
       <>
        <div>
-  <Search setPageNumber={setPageNumber} setSearch={setSearch} ></Search>
+  <LocSearch setPageNumber={setPageNumber} setSearch={setSearch} places={places}></LocSearch>
  </div>
       <div className='container mx-auto p-5'>
         

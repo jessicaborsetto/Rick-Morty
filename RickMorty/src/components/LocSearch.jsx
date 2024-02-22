@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { Alert } from "@material-tailwind/react";
 
-function Search({ setSearch, setPageNumber, characters }) {
+function LocSearch({ setSearch, setPageNumber, places }) {
 
     const [searchError, setSearchError] = useState(false);
 
     const handleSearch = (e) => {
         const inputValue = e.target.value.toLowerCase();
-        const matchingCharacters  = characters.filter((character) =>
-            character.name.toLowerCase().includes(inputValue)
+      
+        const matchingPlaces = places.filter((place) =>
+        place.name.toLowerCase().includes(inputValue)
         );
 
-        if (matchingCharacters.length > 0) {
+        if (matchingPlaces.length > 0) {
             setSearchError(false);
             setPageNumber(1);
             setSearch(inputValue);
@@ -58,7 +59,7 @@ function Search({ setSearch, setPageNumber, characters }) {
     )
 }
 
-export default Search
+export default LocSearch
 
 
 
