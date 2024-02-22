@@ -20,8 +20,7 @@ import {
   
           <p>Dimension: <b>{places.dimension}</b></p>
           <p>Type: <b>{places.type} </b></p>
-  
-          {/* <p>Last known location: <b className="hover:text-rose-600">{character.location.name}</b> </p> */}
+
          
         </CardBody>
   
