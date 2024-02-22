@@ -3,6 +3,7 @@ import Header from './components/Header'
 import { useEffect, useState } from "react"
 import MyButtons from './atoms/MyButtons'
 import PlaceGallery from './components/PlaceGallery'
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 import Search from './components/Search'
 import Pages from './atoms/Pages'
@@ -64,6 +65,14 @@ useEffect(() => {
 
   return (
     <>
+
+<HashRouter basename="/app">
+      <Routes>
+        <Route path="/" /> {/* 👈 Renders at /#/app/ */}
+      </Routes>
+    </HashRouter>
+
+
       <div>
         <Header></Header>
       </div>
